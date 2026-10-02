@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Fik3semfo family website — meet our family in Faaman, Ghana, share memories, and stay in touch.">
+    <title>The Fik3semfo Family | Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #6d8c54;
+            --secondary-color: #d4a762;
+            --accent-color: #c56c86;
+            --light-color: #f9f5eb;
+            --dark-color: #333333;
+            --soft-brown: #e8d8c3;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            color: var(--light-color);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 30px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #b05a77;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: #c0954a;
+        }
+
+        .btn-light {
+            background-color: transparent;
+            border: 2px solid var(--light-color);
+            color: white;
+        }
+
+        .btn-light:hover {
+            background-color: var(--light-color);
+            color: var(--primary-color);
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .logo i {
+            color: var(--secondary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            bottom: 0;
+            left: 0;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover:after,
+        .nav-links a.active:after {
+            width: 100%;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--secondary-color);
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-color);
+            background: none;
+            border: none;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(109, 140, 84, 0.85), rgba(109, 140, 84, 0.9)), url('images/images 7.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 180px 0 120px;
+            margin-top: 80px;
+        }
+
+        .hero h1 {
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .family-motto {
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .family-members {
+            background-color: white;
+        }
+
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .member-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .member-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .member-img {
+            height: 250px;
+            overflow: hidden;
+            background: var(--soft-brown);
+        }
+
+        .member-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .member-card:hover .member-img img {
+            transform: scale(1.05);
+        }
+
+        .member-info {
+            padding: 25px;
+        }
+
+        .member-info h3 {
+            margin-bottom: 10px;
+        }
+
+        .member-role {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .member-bio {
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+
+        .photo-gallery {
+            background-color: var(--soft-brown);
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            height: 250px;
+            position: relative;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            border: none;
+            padding: 0;
+            width: 100%;
+            display: block;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            opacity: 0;
+            transition: var(--transition);
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+        }
+
+        .gallery-item:hover .gallery-overlay,
+        .gallery-item:focus .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-caption {
+            color: white;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .family-updates {
+            background-color: white;
+        }
+
+        .updates-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .update-item {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--secondary-color);
+        }
+
+        .update-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .update-date {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .update-title {
+            font-size: 1.4rem;
+            color: var(--dark-color);
+            margin-bottom: 0;
+        }
+
+        .update-content {
+            line-height: 1.7;
+        }
+
+        .family-tree {
+            background-color: var(--soft-brown);
+        }
+
+        .tree-intro {
+            text-align: center;
+            max-width: 640px;
+            margin: 0 auto 40px;
+        }
+
+        .tree-visual {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .tree-level {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            position: relative;
+        }
+
+        .tree-parents {
+            margin-bottom: 0;
+        }
+
+        .tree-stem {
+            width: 3px;
+            height: 40px;
+            background: var(--primary-color);
+        }
+
+        .tree-children {
+            padding-top: 24px;
+            border-top: 3px solid var(--primary-color);
+            max-width: 980px;
+        }
+
+        .tree-node {
+            background-color: white;
+            padding: 15px 22px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            min-width: 170px;
+        }
+
+        .tree-node.parents {
+            border-top: 4px solid var(--secondary-color);
+        }
+
+        .tree-node h4 {
+            margin-bottom: 5px;
+            font-size: 1.15rem;
+        }
+
+        .tree-node p {
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            margin-bottom: 0;
+        }
+
+        .contact {
+            background-color: white;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            align-items: start;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 20px;
+        }
+
+        .contact-details {
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-item i {
+            width: 40px;
+            height: 40px;
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .contact-item h4 {
+            margin-bottom: 4px;
+            font-size: 1.1rem;
+        }
+
+        .contact-item p {
+            margin-bottom: 0;
+        }
+
+        .family-quote {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            padding: 20px;
+            background-color: #f9f5eb;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .family-quote:before {
+            content: '"';
+            font-size: 3rem;
+            color: var(--secondary-color);
+            line-height: 0;
+            position: relative;
+            top: 15px;
+            margin-right: 5px;
+        }
+
+        .contact-form {
+            background: var(--light-color);
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #e0d5c5;
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 1rem;
+            background: white;
+            color: var(--dark-color);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: 2px solid var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+
+        .form-status {
+            display: none;
+            margin-top: 16px;
+            padding: 12px 16px;
+            border-radius: 10px;
+            background: #e8f3dc;
+            color: #3d5a2a;
+            font-weight: 600;
+        }
+
+        .form-status.visible {
+            display: block;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 70px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-column h3 {
+            color: white;
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-color);
+            padding-left: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .social-icons a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1100;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 85vh;
+            border-radius: 8px;
+        }
+
+        .lightbox-caption {
+            position: absolute;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-weight: 600;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 16px;
+            right: 24px;
+            color: white;
+            font-size: 2.5rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            line-height: 1;
+            transition: var(--transition);
+        }
+
+        .lightbox-close:hover {
+            color: var(--secondary-color);
+        }
+
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+
+            h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                background-color: white;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                box-shadow: var(--shadow);
+                transform: translateY(-120%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .hero {
+                padding: 150px 0 100px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .member-card {
+                max-width: 350px;
+                margin: 0 auto;
+            }
+
+            .contact-form {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar" aria-label="Main">
+                <a href="#home" class="logo">
+                    <i class="fas fa-home" aria-hidden="true"></i>
+                    <span>The Fik3semfo</span>
+                </a>
+
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#members">Family Members</a></li>
+                    <li><a href="#gallery">Photo Gallery</a></li>
+                    <li><a href="#updates">Family Updates</a></li>
+                    <li><a href="#tree">Family Tree</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>The Fik3semfo Family</h1>
+            <p class="hero-subtitle">Welcome to our family website — a home for our journey, our memories, and the love we share in Faaman, Ghana.</p>
+            <div class="hero-btns">
+                <a href="#members" class="btn">Meet Our Family</a>
+                <a href="#gallery" class="btn btn-light">View Memories</a>
+            </div>
+            <p class="family-motto">"Family is not an important thing. It's everything." — Mcpalmer Yeboah</p>
+        </div>
+    </section>
+
+    <section class="family-members" id="members">
+        <div class="container">
+            <h2>Our Family Members</h2>
+            <div class="members-grid">
+                <article class="member-card">
+                    <div class="member-img">
+                        <img src="images/images 11.jpeg" alt="Ansu Philip">
+                    </div>
+                    <div class="member-info">
+                        <h3>Ansu Philip</h3>
+                        <span class="member-role">Father / Farmer</span>
+                        <p class="member-bio">Papa Ansu is the rock of our family. He loves pampering his grandchildren and telling dad jokes that make us all groan.</p>
+                    </div>
+                </article>
+
+                <article class="member-card">
+                    <div class="member-img">
+                        <img src="images/images 2.jpeg" alt="Somea Augustina">
+                    </div>
+                    <div class="member-info">
+                        <h3>Somea Augustina</h3>
+                        <span class="member-role">Mother / Farmer</span>
+                        <p class="member-bio">Mama Somea keeps our family organized and loved. She enjoys gardening and gathering everyone around a good meal.</p>
+                    </div>
+                </article>
+
+                <article class="member-card">
+                    <div class="member-img">
+                        <img src="images/images 1.jpeg" alt="Ansu Yeboah Mercy">
+                    </div>
+                    <div class="member-info">
+                        <h3>Ansu Yeboah Mercy</h3>
+                        <span class="member-role">Daughter</span>
+                        <p class="member-bio">Mercy brings warmth and laughter wherever she goes. She is a joy to the whole household.</p>
+                    </div>
+                </article>
+
+                <article class="member-card">
+                    <div class="member-img">
+                        <img src="images/images 5.jpeg" alt="Ansu Antwiwaa Ruth">
+                    </div>
+                    <div class="member-info">
+                        <h3>Ansu Antwiwaa Ruth</h3>
+                        <span class="member-role">Daughter</span>
+                        <p class="member-bio">Ruth is kind, thoughtful, and always ready to help. Family gatherings are brighter with her there.</p>
+                    </div>
+                </article>
+
+                <article class="member-card">
+                    <div class="member-img">
+                        <img src="images/images 3.jpeg" alt="Ansu Takyiwaa Sophia">
+                    </div>
+                    <div class="member-info">
+                        <h3>Ansu Takyiwaa Sophia</h3>
+                        <span class="member-role">Daughter</span>
+                        <p class="member-bio">Sophia is creative and full of energy. She loves capturing family moments and celebrating together.</p>
+                    </div>
+                </article>
+
+                <article class="member-card">
+                    <div class="member-img">
+                        <img src="images/images 13.jpeg" alt="Ansu Lydia">
+                    </div>
+                    <div class="member-info">
+                        <h3>Ansu Lydia</h3>
+                        <span class="member-role">Daughter</span>
+                        <p class="member-bio">Lydia is gentle and caring. She keeps close ties with everyone and never misses a family celebration.</p>
+                    </div>
+                </article>
+
+                <article class="member-card">
+                    <div class="member-img">
+                     <img src="images/images 6.jpeg" alt="Nana Asare Bernard">
+                    </div>
+                    <div class="member-info">
+                        <h3>Nana Asare Bernard</h3>
+                        <span class="member-role">Son</span>
+                        <p class="member-bio">Bernard is dependable and full of humour. He looks after the family and makes hard days lighter.</p>
+                    </div>
+                </article>
+
+                <article class="member-card">
+                    <div class="member-img">
+                        <img src="images/images 14.jpeg" alt="Okofo Dateh Williams">
+                    </div>
+                    <div class="member-info">
+                        <h3>Okofo Dateh Williams</h3>
+                        <span class="member-role">Son</span>
+                        <p class="member-bio">Williams is adventurous and loyal. He loves hometown visits and time spent with his siblings.</p>
+                    </div>
+                </article>
+
+                <article class="member-card">
+                    <div class="member-img">
+                        <img src="images/images 4.jpeg" alt="Gyedu Oswald">
+                    </div>
+                    <div class="member-info">
+                        <h3>Gyedu Oswald</h3>
+                        <span class="member-role">Son</span>
+                        <p class="member-bio">Oswald is the youngest of the brothers — lively, curious, and always ready for the next family outing.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="photo-gallery" id="gallery">
+        <div class="container">
+            <h2>Family Memories</h2>
+            <div class="gallery-container">
+                <button type="button" class="gallery-item" data-src="images/images 7.jpeg" data-caption="After church, 2024">
+                    <img src="images/images 7.jpeg" alt="Family after church in 2024">
+                    <div class="gallery-overlay">
+                        <p class="gallery-caption">After church, 2024</p>
+                    </div>
+                </button>
+
+                <button type="button" class="gallery-item" data-src="images/Images 8.jpeg" data-caption="Christmas morning, 2025">
+                    <img src="images/Images 8.jpeg" alt="Christmas morning with the family">
+                    <div class="gallery-overlay">
+                        <p class="gallery-caption">Christmas morning, 2025</p>
+                    </div>
+                </button>
+
+                <button type="button" class="gallery-item" data-src="images/Images 10.jpeg" data-caption="Hometown visit, 2023">
+                    <img src="images/Images 10.jpeg" alt="Visiting hometown in 2023">
+                    <div class="gallery-overlay">
+                        <p class="gallery-caption">Hometown visit, 2023</p>
+                    </div>
+                </button>
+
+                <button type="button" class="gallery-item" data-src="images/Images 9.jpeg" data-caption="Visiting Accra">
+                    <img src="images/Images 9.jpeg" alt="Family visiting Accra">
+                    <div class="gallery-overlay">
+                        <p class="gallery-caption">Visiting Accra</p>
+                    </div>
+                </button>
+
+                <button type="button" class="gallery-item" data-src="images/images 11.jpeg" data-caption="Papa Ansu at home">
+                    <img src="images/images 11.jpeg" alt="Papa Ansu at home">
+                    <div class="gallery-overlay">
+                        <p class="gallery-caption">Papa Ansu at home</p>
+                    </div>
+                </button>
+
+                <button type="button" class="gallery-item" data-src="images/images 2.jpeg" data-caption="Mama Somea">
+                    <img src="images/images 2.jpeg" alt="Mama Somea">
+                    <div class="gallery-overlay">
+                        <p class="gallery-caption">Mama Somea</p>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="family-updates" id="updates">
+        <div class="container">
+            <h2>Family Updates</h2>
+            <div class="updates-container">
+                <article class="update-item">
+                    <div class="update-header">
+                        <h3 class="update-title">Christmas Together in Faaman</h3>
+                        <span class="update-date">December 25, 2025</span>
+                    </div>
+                    <div class="update-content">
+                        <p>The whole Fik3semfo household gathered at home for Christmas. We cooked, prayed, and stayed up sharing stories. Photos from the morning are in the gallery — more will follow after the next reunion.</p>
+                    </div>
+                </article>
+
+                <article class="update-item">
+                    <div class="update-header">
+                        <h3 class="update-title">After Church Gathering</h3>
+                        <span class="update-date">November 2024</span>
+                    </div>
+                    <div class="update-content">
+                        <p>Sunday after service we stayed together for family prayer and a meal. It is one of our favourite traditions, and the children especially look forward to it every week.</p>
+                    </div>
+                </article>
+
+                <article class="update-item">
+                    <div class="update-header">
+                        <h3 class="update-title">Hometown Visit</h3>
+                        <span class="update-date">August 2023</span>
+                    </div>
+                    <div class="update-content">
+                        <p>Those who live away came home to Faaman. We visited family, walked the town, and reminded ourselves why hometown will always be home. Next reunion is already being planned.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="family-tree" id="tree">
+        <div class="container">
+            <h2>Our Family Tree</h2>
+            <p class="tree-intro">Papa Ansu and Mama Somea, and the seven children they raised together.</p>
+            <div class="tree-visual">
+                <div class="tree-level tree-parents">
+                    <div class="tree-node parents">
+                        <h4>Ansu Philip</h4>
+                        <p>Father</p>
+                    </div>
+                    <div class="tree-node parents">
+                        <h4>Somea Augustina</h4>
+                        <p>Mother</p>
+                    </div>
+                </div>
+                <div class="tree-stem" aria-hidden="true"></div>
+                <div class="tree-level tree-children">
+                    <div class="tree-node">
+                        <h4>Ansu Yeboah Mercy</h4>
+                        <p>Daughter</p>
+                    </div>
+                    <div class="tree-node">
+                        <h4>Ansu Antwiwaa Ruth</h4>
+                        <p>Daughter</p>
+                    </div>
+                    <div class="tree-node">
+                        <h4>Ansu Takyiwaa Sophia</h4>
+                        <p>Daughter</p>
+                    </div>
+                    <div class="tree-node">
+                        <h4>Ansu Lydia</h4>
+                        <p>Daughter</p>
+                    </div>
+                    <div class="tree-node">
+                        <h4>Nana Asare Bernard</h4>
+                        <p>Son</p>
+                    </div>
+                    <div class="tree-node">
+                        <h4>Okofo Dateh Williams</h4>
+                        <p>Son</p>
+                    </div>
+                    <div class="tree-node">
+                        <h4>Gyedu Oswald</h4>
+                        <p>Son</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Let's Connect!</h3>
+                    <p>We would love to hear from you. Whether you are family, a friend, or just saying hello, reach out anytime.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                            <div>
+                                <h4>Our Home</h4>
+                                <p>Faaman, Ghana</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <div>
+                                <h4>Email Us</h4>
+                                <p><a href="mailto:kusi83478@gmail.com">kusi83478@gmail.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-phone" aria-hidden="true"></i>
+                            <div>
+                                <h4>Call Us</h4>
+                                <p><a href="tel:+233200222378">(+233) 200 222 378</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="family-quote">
+                        The love of a family is life's greatest blessing.
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form id="familyContactForm">
+                        <div class="form-group">
+                            <label for="contactName">Your name</label>
+                            <input id="contactName" name="name" type="text" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Your email</label>
+                            <input id="contactEmail" name="email" type="email" placeholder="you@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactSubject">Subject</label>
+                            <input id="contactSubject" name="subject" type="text" placeholder="What is this about?" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Your message</label>
+                            <textarea id="contactMessage" name="message" placeholder="Write your message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Send Message</button>
+                        <p class="form-status" id="formStatus" role="status">Thank you! Your message is ready — email us at kusi83478@gmail.com and we will reply soon.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>The Fik3semfo Family</h3>
+                    <p>A family that laughs together, stays together. Thank you for visiting our family website.</p>
+                    <div class="social-icons">
+                        <a href="mailto:kusi83478@gmail.com" aria-label="Email the family"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#members">Family Members</a></li>
+                        <li><a href="#gallery">Photo Gallery</a></li>
+                        <li><a href="#updates">Family Updates</a></li>
+                        <li><a href="#tree">Family Tree</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Family Traditions</h3>
+                    <ul class="footer-links">
+                        <li>Sunday family prayer</li>
+                        <li>Coming home to Faaman</li>
+                        <li>Christmas together</li>
+                        <li>Birthday celebrations</li>
+                        <li>Family reunion</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2026 The Fik3semfo Family. All rights reserved. | Made with <i class="fas fa-heart" style="color: var(--accent-color);" aria-hidden="true"></i> for our family</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+        <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close photo">&times;</button>
+        <img class="lightbox-content" id="lightbox-img" src="" alt="">
+        <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+
+    <script>
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileToggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('active');
+            mobileToggle.setAttribute('aria-expanded', String(isOpen));
+            mobileToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+            const icon = mobileToggle.querySelector('i');
+            icon.classList.toggle('fa-bars', !isOpen);
+            icon.classList.toggle('fa-times', isOpen);
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileToggle.setAttribute('aria-expanded', 'false');
+                mobileToggle.setAttribute('aria-label', 'Open menu');
+                mobileToggle.querySelector('i').classList.remove('fa-times');
+                mobileToggle.querySelector('i').classList.add('fa-bars');
+            });
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if (!targetElement) return;
+                e.preventDefault();
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightboxCaption');
+
+        function openLightbox(imageSrc, caption) {
+            lightboxImg.src = imageSrc;
+            lightboxImg.alt = caption || 'Enlarged family photo';
+            lightboxCaption.textContent = caption || '';
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            lightboxImg.src = '';
+        }
+
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', () => {
+                openLightbox(item.dataset.src, item.dataset.caption);
+            });
+        });
+
+        document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', function (e) {
+            if (e.target === this) closeLightbox();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
+        });
+
+        document.getElementById('familyContactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = document.getElementById('contactName').value.trim();
+            const email = document.getElementById('contactEmail').value.trim();
+            const subject = document.getElementById('contactSubject').value.trim();
+            const message = document.getElementById('contactMessage').value.trim();
+            const body = encodeURIComponent(`From: ${name} (${email})\n\n${message}`);
+            window.location.href = `mailto:kusi83478@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+            document.getElementById('formStatus').classList.add('visible');
+            this.reset();
+        });
+
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+            }
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.member-card, .update-item, .gallery-item, .tree-node').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
